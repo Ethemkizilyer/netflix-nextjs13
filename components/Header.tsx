@@ -5,6 +5,7 @@ import Link from "next/link"
 import { MagnifyingGlassIcon , BellIcon} from "@heroicons/react/24/solid"
 
 const Header = () => {
+  
   return (
     <header>
       <Link href="/">

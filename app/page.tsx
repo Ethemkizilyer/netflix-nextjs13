@@ -1,13 +1,14 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
+import Image from "next/image";
+import { Inter } from "@next/font/google";
 import styles from "../styles/page.module.css";
-
-const inter = Inter({ subsets: ['latin'] })
+import Banner from "../components/Banner";
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      Page
+    <main className="space-y-10 pb-20">
+      <Banner />
+     
     </main>
-  )
+  );
 }
