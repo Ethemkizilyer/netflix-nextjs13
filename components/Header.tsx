@@ -3,11 +3,33 @@
 import Image from "next/image"
 import Link from "next/link"
 import { MagnifyingGlassIcon , BellIcon} from "@heroicons/react/24/solid"
+import { useEffect, useState } from "react"
 
 const Header = () => {
+
+  const [isScrolled,setIsScrolled]= useState(false)
+
+  useEffect(()=>{
+    const handleScroll=()=>{
+      if(window.scrollY > 0){
+        setIsScrolled(true)
+      }
+      else{
+        setIsScrolled(false)
+      }
+    }
+
+    window.addEventListener("scroll",handleScroll)
+
+    return ()=>{
+      window.removeEventListener("scroll",handleScroll
+      )
+    }
+
+  },[])
   
   return (
-    <header>
+    <header className={`${isScrolled&& "bg-[#141414]"}`}>
       <Link href="/">
         <Image
           src="/logo.png"
@@ -31,7 +53,11 @@ const Header = () => {
         <p className="hidden lg:inline">Kids</p>
         <BellIcon className="h-6 w-6" />
         <Link href="/">
-          <img src="https://rb.gy/g1pwyx" alt="icon" className="cursor-pointer rounded" />
+          <img
+            src="https://rb.gy/g1pwyx"
+            alt="icon"
+            className="cursor-pointer rounded"
+          />
         </Link>
       </div>
     </header>
