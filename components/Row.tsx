@@ -1,6 +1,5 @@
 "use client";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
-import { title } from "process";
 import React, { useRef, useState } from "react";
 import Thumbnail from "./Thumbnail";
 
@@ -13,7 +12,7 @@ const Row = ({ title, movies }: Props) => {
   const rowRef = useRef<HTMLDivElement>(null);
   const [isMoved, setMoved] = useState(false);
 
-  console.log(rowRef.current?.clientWidth);
+  console.log(title);
 
   const handleClick = (direction: string) => {
     setMoved(true);
@@ -30,9 +29,9 @@ const Row = ({ title, movies }: Props) => {
   };
 
   return (
-    <section className="h-40 space-y-1 md:space-y-2 px-5 pb-20">
+    <section className="h-40 my-9 space-y-1 md:space-y-2 px-5 pb-20">
       <h2 className="w-56 pt-5 cursor-pointer text-sm font-semibold text-gray-50 transition duration-150 hover:text-gray-300 md:text-xl">
-        {title}
+     {title}
       </h2>
       <div className="group relative md:-ml-2">
         <ChevronLeftIcon

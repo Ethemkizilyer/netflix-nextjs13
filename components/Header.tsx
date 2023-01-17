@@ -40,7 +40,7 @@ const Header = () => {
         />
       </Link>
       <ul className="hidden space-x-4 md:flex">
-        <li className="headerLink cursor-default font-semibold text-white hover:text-white">
+        <li className="headerLink cursor-pointer font-semibold text-white hover:text-white">
           Home
         </li>
         <li className="headerLink">Tv Shows</li>

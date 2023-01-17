@@ -1,5 +1,7 @@
+
 import Image from 'next/image'
 import Link from 'next/link'
+
 
 import React from 'react'
 
@@ -14,7 +16,9 @@ const Thumbnail = ({movie}:Props) => {
     >
       <Link href={`/${movie.id}`}>
         <Image
-          src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path || movie.poster_path}`}
+          src={`https://image.tmdb.org/t/p/w500${
+            movie.backdrop_path || movie.poster_path
+          }`}
           className="rounded-sm object-cover md-rounded"
           alt="Film"
           fill
