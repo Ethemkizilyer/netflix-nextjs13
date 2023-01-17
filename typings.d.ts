@@ -1,3 +1,9 @@
+interface Genre {
+    id:number;
+    name:string;
+}
+
+
 interface Movie {
   title?: string;
   backdrop_path?: string;
@@ -16,6 +22,7 @@ interface Movie {
   first_ait_date?: string;
   name?: string;
   origin_country?: string[];
+  genres:Genre[]
 }
 
 interface Element {
