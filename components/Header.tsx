@@ -54,11 +54,7 @@ const Header = () => {
         <p className="hidden lg:inline">Kids</p>
         <BellIcon className="h-6 w-6" />
         <Link href="/">
-          <img
-            src={"https://rb.gy/g1pwyx"}
-            alt="icon"
-            className="cursor-pointer rounded"
-          />
+          <Image src={avatar} width={24} height={24} alt="icon" className="cursor-pointer rounded" />
         </Link>
       </div>
     </header>

@@ -5,7 +5,6 @@ const nextConfig = {
   },
   images: {
     domains: ["image.tmdb.org"],
-    domains: ["rb.gy"],
   },
 };
 
