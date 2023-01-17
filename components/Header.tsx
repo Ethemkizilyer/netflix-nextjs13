@@ -4,7 +4,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { MagnifyingGlassIcon , BellIcon} from "@heroicons/react/24/solid"
 import { useEffect, useState } from "react"
-
+import logo from "../public/logo.png"
+import avatar from "../public/avatar.png";
 const Header = () => {
 
   const [isScrolled,setIsScrolled]= useState(false)
@@ -29,10 +30,10 @@ const Header = () => {
   },[])
   
   return (
-    <header className={`${isScrolled&& "bg-[#141414]"}`}>
+    <header className={`${isScrolled && "bg-[#141414]"}`}>
       <Link href="/">
         <Image
-          src="/logo.png"
+          src={logo}
           alt=""
           width={100}
           height={100}
@@ -54,7 +55,7 @@ const Header = () => {
         <BellIcon className="h-6 w-6" />
         <Link href="/">
           <img
-            src="https://rb.gy/g1pwyx"
+            src={"https://rb.gy/g1pwyx"}
             alt="icon"
             className="cursor-pointer rounded"
           />
