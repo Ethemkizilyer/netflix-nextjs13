@@ -8,7 +8,7 @@ const Banner = () => {
     <section className="h-screen bg-transparent w-full relative">
       <div className="relative  w-full h-full opatiy-40">
         <Image
-          src="https://wp.oggusto.com/wp-content/uploads/2022/02/2022de-Mutlaka-Izlemeniz-Gereken-Netflix-Filmleri.jpg"
+          src=""
           className="rounded-sm object-cover  md:rounded"
           fill
           alt="Film"

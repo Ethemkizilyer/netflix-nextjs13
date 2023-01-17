@@ -5,7 +5,7 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: ["wp.oggusto.com"],
+    domains: ["image.tmdb.org"],
   },
 };
 

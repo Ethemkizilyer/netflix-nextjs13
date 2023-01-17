@@ -11,7 +11,7 @@ export default async function Home() {
   return (
     <main className="space-y-10 pb-20">
       <Banner />
-      <Row movies={trendingMovies} />
+      <Row title="Popular movies" movies={trendingMovies} />
     </main>
   );
 }
