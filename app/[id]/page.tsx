@@ -11,8 +11,8 @@ interface Props {
 
 const DetailPage = async ({ params }: Props) => {
   const movie: Movie = await fetchMovie(params.id);
-const videos = await fetchVideo(movie)
-console.log(videos);
+  const videos = await fetchVideo(movie);
+  console.log(videos);
   return (
     <div className="h-screen bg-transparent w-full relative ">
       <CustomPlayer />
@@ -40,7 +40,7 @@ console.log(videos);
           <h3 style={{ color: "#642c2c" }} className="font-bold">
             Genre:
           </h3>
-          {movie?.genres.map((genre, index) => (
+          {movie?.genres?.map((genre, index) => (
             <p style={{ color: "#a75959" }} key={index}>
               {genre.name}
             </p>
