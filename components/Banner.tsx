@@ -12,7 +12,7 @@ const Banner = ({ movies }: Props) => {
       <div className="relative  w-full h-full opatiy-40">
         <Image
           src={`https://image.tmdb.org/t/p/w500${
-            movies.backdrop_path || movies.poster_path
+            movies?.poster_path|| movies?.backdrop_path 
           }`}
           className="rounded-sm object-cover  md:rounded"
           fill
