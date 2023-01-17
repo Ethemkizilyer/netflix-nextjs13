@@ -32,9 +32,18 @@ export const fetchTopRated = async () => {
   return data.results;
 };
 export const fetchMovie = async (id: string) => {
-  const { data } = await axios(
+  const res = await fetch(
     `${BASE_URL}/movie/${id}?api_key=${API_KEY}&language=en-US`
   );
-
-  return data.results;
+const data=await res.json()
+  return data;
 };
+export const fetchVideo = async (movie: Movie) => {
+  const res= await fetch(
+    `${BASE_URL}/movie/${movie?.id}/videos?api_key=${API_KEY}&language=en-US`
+  );
+const data =await res.json()
+  return data?.results;
+};
+
+
