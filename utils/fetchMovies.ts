@@ -4,28 +4,28 @@ export const API_KEY = process.env.NEXT_PUBLIC_MOVIE_API_KEY!;
 export const BASE_URL = "https://api.themoviedb.org/3";
 
 export const fetchTrending = async () => {
-  const { data } = await axios(
+  const { data } = await axios.get(
     `${BASE_URL}/trending/all/week?api_key=${API_KEY}&language=en-US`
   );
 
   return data.results;
 };
 export const fetchNetflixOriginals = async () => {
-  const { data } = await axios(
+  const { data } = await axios.get(
     `${BASE_URL}/discover/movie?api_key=${API_KEY}&language=en-US&with_networks=213`
   );
 
   return data.results;
 };
 export const fetchHorror = async () => {
-  const { data } = await axios(
+  const { data } = await axios.get(
     `${BASE_URL}/discover/movie?api_key=${API_KEY}&language=en-US&with_genres=27`
   );
 
   return data.results;
 };
 export const fetchTopRated = async () => {
-  const { data } = await axios(
+  const { data } = await axios.get(
     `${BASE_URL}/movie/top_rated?api_key=${API_KEY}&language=en-US`
   );
 
