@@ -17,7 +17,7 @@ export const fetchNetflixOriginals = async () => {
 
   return data.results;
 };
-export const fetchMorror = async () => {
+export const fetchHorror = async () => {
   const { data } = await axios(
     `${BASE_URL}/discover/movie?api_key=${API_KEY}&language=en-US&with_genres=27`
   );
