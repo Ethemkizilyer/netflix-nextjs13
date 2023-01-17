@@ -3,7 +3,11 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import React, { useRef, useState } from "react";
 import Thumbnail from "./Thumbnail";
 
-const Row = () => {
+interface Props {
+    movies:Movie[]
+}
+
+const Row = ({movies}:Props) => {
   const rowRef = useRef<HTMLDivElement>(null);
   const [isMoved, setMoved] = useState(false);
 
