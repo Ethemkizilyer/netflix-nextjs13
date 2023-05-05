@@ -5,11 +5,13 @@ import {
   fetchTopRated,
   fetchNetflixOriginals,
   fetchHorror,
+  inputMovie,
 } from "@/utils/fetchMovies";
 
 export default async function Home() {
   const trendingMovies = await fetchTrending();
   const topRatedMovies = await fetchTopRated();
+  const data = await inputMovie()
   const netflixOrginalMovies = await fetchNetflixOriginals();
   const horrorMovies = await fetchHorror();
   // console.log(trendingMovies);
@@ -19,7 +21,7 @@ export default async function Home() {
 
   return (
     <main className="space-y-10 pb-20">
-      <Banner movies={randomMovie} />
+      <Banner movies={data} />
       <Row title="Popular movies" movies={trendingMovies} />
       <Row title="Top rated" movies={topRatedMovies} />
       <Row title="Netflix Original" movies={netflixOrginalMovies} />

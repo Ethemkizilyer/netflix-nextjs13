@@ -45,5 +45,14 @@ export const fetchVideo = async (movie: Movie) => {
 const data =await res.json()
   return data?.results;
 };
+export const inputMovie = async (a="legend") => {
+  console.log("object")
+  const res= await fetch(
+   
+    `${BASE_URL}/search/movie?api_key=${API_KEY}&language=en-US&query=${a}`
+  );
+const data =await res.json()
+  return data?.results[0];
+};
 
 
